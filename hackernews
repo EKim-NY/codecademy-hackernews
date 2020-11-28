@@ -54,3 +54,12 @@ GROUP BY 1;
 
 SELECT timestamp
 FROM hacker_news; 
+
+SELECT 
+ strftime('%H', timestamp) AS 'Hours', 
+ ROUND(AVG(score),1) AS 'Avg Score', 
+ COUNT(*) AS 'Story Count'
+FROM hacker_news
+WHERE timestamp IS NOT null 
+GROUP BY 1 
+ORDER BY 1; 
