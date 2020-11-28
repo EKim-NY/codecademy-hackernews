@@ -51,3 +51,6 @@ SELECT CASE
   COUNT(*) AS 'Number of Stories'
 FROM hacker_news 
 GROUP BY 1; 
+
+SELECT timestamp
+FROM hacker_news; 
